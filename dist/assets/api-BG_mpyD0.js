@@ -1,0 +1,1 @@
+const o="http://localhost:8000";async function r(n,a={}){const t=await fetch(`${o}${n}`,{...a,headers:{"Content-Type":"application/json",...a.headers}}),e=await t.json().catch(()=>null);if(!t.ok){const s=e?.detail||`Request failed with status ${t.status}`;throw new Error(typeof s=="string"?s:JSON.stringify(s))}return e}export{r as a};
